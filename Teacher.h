@@ -2,19 +2,12 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
-
-class Teacher
-{
-	public:
-	int id;
-	string name;
-
-	Teacher() {}
-	Teacher(int a, string s) : id(a), name(s) {}
-
-	void display() const {
-		cout << name << " (ID: " << id << ")";
-	}
+#include "person.h"
+class teacher : public person {
+public:
+    string teacher_id;
+    teacher(string n, string id) : person(n) {
+        teacher_id = id;
+    }
 };
 
