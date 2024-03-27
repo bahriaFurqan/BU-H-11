@@ -2,19 +2,12 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
-
-class Student
-{
+#include "person.h"
+class student : public person {
 public:
-    int enroll;
-    string name;
-
-    Student() {}
-    Student(int a, string s) : enroll(a), name(s) {}
-
-    void display() const {
-        cout << name << " (Enroll: " << enroll << ")";
+    string enrollment;
+    student(string n, string en) : person(n) {
+        enrollment = en;
     }
 };
 
